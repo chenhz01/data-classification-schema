@@ -2,6 +2,8 @@
 
 A sensitivity-level schema and field-labeling checker for data inventories. Levels (`public`…`restricted`) are declared once with numeric ranks, pattern rules force minimum levels for risky field names, and the checker lists every unlabeled field. Pure standard library, single file, offline. *No direct equivalent found as of 2026-10-13.*
 
+<p align="center"><img src="docs/demo.gif" alt="demo" width="720"></p>
+
 ## Problem
 
 Data classification policies live in PDFs; field labels live in schema files; nothing connects them. The result is predictable: a column named `user_password_reset_token` sits at `internal` while the policy says credentials are `restricted`, and half the new tables ship with no label at all. Auditors ask "show me where the policy is enforced" and the honest answer is a shrug.
